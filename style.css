@@ -401,6 +401,12 @@ nav #selected {
     font-weight: bold;
 }
 
+@media (max-width: 480px) {
+    .counter-item .plus,
+    .counter-item .plus-customers {
+        top: 40%;
+}
+
 .counter-container {
     opacity: 0; /* Start hidden */
     transform: translateY(50px); /* Start slightly below */
