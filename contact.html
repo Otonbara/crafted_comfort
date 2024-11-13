@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafted Comfort</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./media/Crafted_Comfort_nobg.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./media/Crafted_Comfort_nobg.png" width="80px" alt="Logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="about.html">About Us</a></li> -->
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#" id="selected">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div id="mobileNav" class="side-nav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <!-- <a href="about.html">About Us</a> -->
+        <a href="products.html">Products</a>
+        <a href="#">Contact Us</a>
+    </div>
+
+    <section class="hero" id="hero">
+        <img src="./media/hero.jpg" alt="hero image">
+        <h1>
+          <span class="animated-left">Contact</span>
+          <span class="animated-right">Us</span>
+        </h1>
+    </section>
+
+    <section class="contact-form">
+      <div class="logo">
+        <img src="./media/Crafted_Comfort.png" alt="Company Logo">
+      </div>
+
+      <form id="contactForm" action="" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        </div>
+
+        <div class="sub-btn">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+
+      <div class="message">
+        Thank you for reaching out! We will get back to you shortly.
+      </div>
+    </section>
+
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405689.29456617753!2d-122.37076411472287!3d37.4028915075824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1731414335452!5m2!1sen!2sng" 
+              width="100%" 
+              height="350" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4>About Us</h4>
+              <p>Crafted Comfort is a leading provider of high-quality furniture and home decor. Our mission is to help you create a comfortable and stylish living space that reflects your personality.</p>
+              <ul class="social-links">
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Quick Links</h4>
+              <ul class="quick-links">
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="about.html">About Us</a></li> -->
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Contact Us</h4>
+              <p>Address: 123 Main St, Anytown, USA 12345</p>
+              <p>Phone: 555-555-5555</p>
+              <p>Email: <a href="mailto:info@craftedcomfort.com">info@craftedcomfort.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 Crafted Comfort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

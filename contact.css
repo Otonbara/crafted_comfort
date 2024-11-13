@@ -1,0 +1,96 @@
+.contact-form .logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 2px 8px 5px rgba(0, 0, 0, 0.8);
+}
+
+form {
+    margin: 0 5%
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: orangered;
+    outline: none;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    border-radius: 35px;
+    cursor: pointer;
+    border-color: black;
+    border-style: outset;
+    padding: 10px 20px;
+    transition: color 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(173, 164, 149);
+}
+
+.sub-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.message {
+    margin: 20px 5%;
+    font-size: 14px;
+    color: black;
+}
+
+.animated-left {
+    display: inline-block; /* Ensure spans can be transformed */
+    opacity: 0; /* Start hidden */
+    transform: translateX(-50%); /* Start from the left */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.animated-left.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move to original position */
+}
+
+.animated-right {
+    display: inline-block; /* Ensure spans can be transformed */
+    opacity: 0; /* Start hidden */
+    transform: translateX(50%); /* Start from the right */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.animated-right.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move to original position */
+}

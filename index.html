@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafted Comfort</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./media/Crafted_Comfort_nobg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./media/Crafted_Comfort_nobg.png" width="80px" alt="Logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#" id="selected">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    
+    <div id="mobileNav" class="side-nav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    
+    <section class="hero" id="hero">
+        <img src="./media/hero.jpg" alt="hero image">
+        <h1>
+            <em>
+                <span>MAKE</span><br>
+                <span>A</span><br>
+                <span>ROOM</span><br>
+                <span>COMFORTABLE</span><br>
+                <span>& ELEGANT</span><br>
+                <span>WITH US.</span>
+            </em>
+        </h1>
+        <a href="products.html">Shop Now <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-left">
+                <div class="text">
+                    <h2>ONLY THE BEST</h2>
+                    <p id="about-description">
+                        At Crafted Comfort, we bring you the finest selection of furniture to transform
+                        your home into a stylish, comfortable retreat. With a curated collection of top-quality pieces,
+                        we offer everything from elegant sofas and luxurious dining sets to chic bedroom essentials.
+                        Each item in our store is carefully selected for its craftsmanship, durability, and timeless appeal,
+                        ensuring that you find the perfect piece to complement your space.
+                        At Crafted Comfort, we believe in offering only the best,
+                        so you can create a home that feels as good as it looks.
+                    </p>
+                </div>
+            </div>
+            <div class="about-right">
+                <img src="./media/about.jpg" alt="about image">
+            </div>
+        </div>
+    </section>
+
+    <section class="counter-section">
+        <div class="counter-container">
+          <div class="counter-item">
+            <h3>Sales</h3>
+            <p id="SalesCounter" class="counter">0</p><span class="plus">k+</span>
+          </div>
+          <div class="counter-item">
+            <h3>Satisfied Customers</h3>
+            <p id="customers" class="counter">0</p><span class="plus-customers">+</span>
+          </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="featured-products">
+            <h2>FEATURED PRODUCTS</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Product Card 1 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="./media/mordern sofa.jpg" alt="Product 1">
+                            <div class="product-info">
+                                <h3>Modern Sofa</h3>
+                                <p class="price">$999</p>
+                                <a href="products.html" class="product-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="./media/biege armchair.jpg" alt="Product 2">
+                            <div class="product-info">
+                                <h3>Elegant Chair</h3>
+                                <p class="price">$299</p>
+                                <a href="products.html" class="product-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="./media/coffee table.jpg" alt="Product 3">
+                            <div class="product-info">
+                                <h3>Coffee Table</h3>
+                                <p class="price">$449</p>
+                                <a href="products.html" class="product-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="./media/dining set.png" alt="Product 4">
+                            <div class="product-info">
+                                <h3>Dining Set</h3>
+                                <p class="price">$1299</p>
+                                <a href="products.html" class="product-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="./media/modular sofa.png" alt="Product 5">
+                            <div class="product-info">
+                                <h3>Modular Sofa</h3>
+                                <p class="price">$599</p>
+                                <a href="products.html" class="product-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next" id="swiper-next"></div>
+                <div class="swiper-button-prev" id="swiper-prev"></div>
+            </div>
+        </div>
+        
+        <p class="more-products-text">
+            At Crafted Comfort, we take pride in offering a curated selection of high-quality furniture designed to enhance your living spaces.
+            We partner with trusted brands to bring you the best in comfort, style, and durability.
+            Whether you're looking for a luxurious sofa, a timeless dining set, or elegant bedroom furniture, 
+            our collection features pieces that reflect the latest trends while standing the test of time. 
+            Each item is carefully selected to ensure it meets our high standards for craftsmanship and design.
+            Discover the perfect piece for your home at Crafted Comfort—where quality and style come together.
+        </p>
+        <div class="more-products">
+            <a href="products.html">More Products <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="prod-container">
+            <div class="prod-left">
+                <div class="text">
+                    <h2>Sofa Sets</h2>
+                    <p id="prod-text">
+                        The Living room is where we spend long hours of the day watching television, 
+                        reading a book or newspaper, relaxing, hosting guests, or enjoying coffee; 
+                        it stands out as one of the most important and decorated living spaces.
+                    </p>
+                    <a class="prod-links" href="products.html">More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="prod-right">
+                <img src="./media/modular sofa.png" alt="Sofa Image">
+            </div>
+        </div>
+        <div class="prod-container">
+            <div class="prod-right">
+                <img src="./media/dining set.png" alt="Sofa Image">
+            </div>
+            <div class="prod-left">
+                <div class="text">
+                    <h2>Dining Table Sets</h2>
+                    <p id="prod-text">
+                        Our Dining room sets are a collection of a mirrored console, 
+                        marquis, dining table, and chairs designed with colors that appeal, 
+                        making your home stand out, and reflect the spirit of the home.
+                    </p>
+                    <a class="prod-links" href="products.html">More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="prod-container">
+            <div class="prod-left">
+                <div class="text">
+                    <h2>Full House Modelling</h2>
+                    <p id="prod-text">
+                        Get a full home decor by our experts, who provide nothing
+                        but the best finishes to suit your taste and personality.
+                    </p>
+                    <a class="prod-links" href="products.html">More <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="prod-right">
+                <img src="./media/modern-styled-entryway.jpg" alt="Sofa Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="QA" id="QA">
+        <h2 class="text-item">Customer Satisfaction</h2>
+        <p class="text-item">
+            Our Strategy Is To Provide Our Customers With Quality Products
+        </p>
+        <p class="text-item smaller-font">
+            Our attention to detail ensures that when you purchase a piece of furniture from Crafted Comfort, 
+            it will provide superior value and comfort. Our products are designed with safety in mind as well, 
+            creating pieces that are long-lasting and safe for all family members. 
+            We strive to ensure our customers enjoy their experience with us by providing the highest quality product 
+            and unbeatable customer service whenever you buy a Crafted Comfort Product.
+        </p>
+        <div class="icons">
+            <div class="icon">
+                <i class="fa fa-truck" aria-hidden="true"></i>
+                <span>Fast Delivery</span>
+                <p class="smaller-font">
+                    Crafted Comfort guarantees home delivery to our customers
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-wrench" aria-hidden="true"></i>
+                <span>Free Installation</span>
+                <p class="smaller-font">
+                    Crafted Comfort guarantees free installation of your furniture
+                    after delivery.
+                </p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <span>Quality Service</span>
+                <p class="smaller-font">
+                    Crafted Comfort is commited to providing the best quality furniture
+                    to it's customers
+                </p>
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="info-left">
+                <p class="info-description">
+                    At Crafted Comfort, we believe that everyone deserves to live in a stylish and comfortable home. 
+                    That’s why we offer a wide range of high-quality furniture at affordable prices. 
+                    Whether you’re looking for a new sofa, bed, dining table, or anything else, we have you covered.
+                    We use only the finest materials and construction methods to ensure that our furniture is built to last. 
+                    We also offer a variety of styles to choose from, so you can find the perfect pieces to match your taste and décor.
+                    Our team of experienced professionals is dedicated to providing you with the best possible customer service. 
+                    We’re here to help you find the perfect furniture for your needs and budget.
+                </p>
+            </div>
+            <div class="info-right">
+                <img src="./media/armchair.jpg" alt="Armchair">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4>About Us</h4>
+              <p>Crafted Comfort is a leading provider of high-quality furniture and home decor. Our mission is to help you create a comfortable and stylish living space that reflects your personality.</p>
+              <ul class="social-links">
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Quick Links</h4>
+              <ul class="quick-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Contact Us</h4>
+              <p>Address: 123 Main St, Anytown, USA 12345</p>
+              <p>Phone: 555-555-5555</p>
+              <p>Email: <a class="footer-mail-link" href="mailto:info@craftedcomfort.com">info@craftedcomfort.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 Crafted Comfort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

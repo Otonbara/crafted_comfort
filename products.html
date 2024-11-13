@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafted Comfort</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="icon" href="./media/Crafted_Comfort_nobg.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="./media/Crafted_Comfort_nobg.png" width="80px" alt="Logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="about.html">About Us</a></li> -->
+                <li><a href="#" id="selected">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <div class="cart-icon" id="cart-icon-desktop">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span id="cart-count">0</span> <!-- Cart Count for Desktop -->
+              </div>
+            </ul>
+        </nav>
+        <div class="cart-icon" id="cart-icon-mobileview">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count-mobile">0</span> <!-- Cart Count for Mobile -->
+        </div>
+        <div class="hamburger" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div id="mobileNav" class="side-nav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <!-- <a href="about.html">About Us</a> -->
+        <a href="#">Products</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <section class="hero" id="hero">
+        <img src="./media/Crafted_Comfort.png" alt="hero image">
+    </section>
+
+    <section class="items">
+      <div class="product-grid">
+        <div class="product-card">
+            <img src="./media/mordern sofa.jpg" alt="Product 1" class="product-image" onclick="openProductModal('Modern Sofa', 'A contemporary sofa that combines style and comfort, featuring a streamlined silhouette with clean, straight lines. It boasts plush, deep cushions upholstered in high-quality fabric or leather, offering both durability and a soft, inviting feel. The minimalist design is complemented by slim metal or wooden legs, making it a versatile addition to any modern living space. Ideal for those who appreciate a blend of elegance and functionality, this piece serves as a sophisticated focal point in any room.')">
+            <h3 class="product-title">Modern Sofa</h3>
+            <p class="product-price">$999</p>
+            <p class="product-description">
+              A sleek, modern sofa with clean lines, 
+              plush cushions, and a minimalist design, perfect for contemporary living spaces.
+            </p>
+            <button class="add-to-cart" onclick="addToCart('Modern Sofa', './media/mordern sofa.jpg')">Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="./media/biege armchair.jpg" alt="Product 2" class="product-image" onclick="openProductModal('Elegant Chair', 'This elegant chair combines classic charm with modern comfort, featuring a gracefully curved backrest and sleek armrests that create a sophisticated silhouette. The chair is generously padded with plush cushioning and upholstered in high-quality fabric or leather, ensuring a luxurious feel and long-lasting durability. Supported by sturdy, tapered wooden or metal legs, it seamlessly blends into both traditional and contemporary interiors, making it a perfect accent piece for living rooms, bedrooms, or stylish office spaces.')">
+            <h3 class="product-title">Elegant Chair</h3>
+            <p class="product-price">$299</p>
+            <p class="product-description">
+              An elegant chair with a timeless design,
+              featuring a curved backrest, plush cushioning,
+              and refined upholstery for a touch of sophistication.
+            </p>
+            <button class="add-to-cart" onclick="addToCart('Elegant Chair', './media/biege armchair.jpg')">Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="./media/coffee table.jpg" alt="Product 3" class="product-image" onclick="openProductModal('Coffee Table', 'This elegant coffee table showcases a blend of functionality and style, featuring a smooth, durable top made from high-quality wood, glass, or marble. The table rests on sturdy, elegantly crafted legs, offering a stable and stylish base. Its minimalist design and clean lines make it a versatile addition to any living room, serving as a perfect centerpiece for holding decor, magazines, or beverages. With its timeless appeal, this coffee table complements both contemporary and classic interiors.')">
+            <h3 class="product-title">Coffee Table</h3>
+            <p class="product-price">$449</p>
+            <p class="product-description">
+              A modern coffee table with a sleek,
+              minimalist design, featuring a smooth surface and sturdy legs,
+              perfect for enhancing any living space.
+            </p>
+            <button class="add-to-cart" onclick="addToCart('Coffee Table', './media/coffee table.jpg')">Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="./media/dining set.png" alt="Product 4" class="product-image" onclick="openProductModal('Dining Set', 'This elegant dining set includes a beautifully crafted table paired with matching chairs, designed to enhance any dining area. The table features a sturdy top made from premium materials like wood, glass, or marble, supported by solid legs for durability. The chairs are ergonomically designed with cushioned seats and supportive backrests, offering both comfort and style. With its clean lines and timeless design, this dining set seamlessly fits into contemporary and traditional interiors, making it perfect for everyday meals or special gatherings.')">
+            <h3 class="product-title">Dining Set</h3>
+            <p class="product-price">$1299</p>
+            <p class="product-description">
+              A stylish dining set featuring a sleek table and comfortable chairs,
+              designed for both modern and classic dining spaces.
+            </p>
+            <button class="add-to-cart" onclick="addToCart('Dining Set', './media/dining set.png')">Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="./media/modular sofa.png" alt="Product 5" class="product-image" onclick="openProductModal('Modular Sofa', 'This modern modular sofa is designed for ultimate flexibility and comfort, featuring individual sections that can be rearranged to suit your space and seating needs. Each module is crafted with plush cushions, high-quality upholstery, and supportive backrests, providing a cozy yet stylish seating experience. The sleek, minimalist design, complemented by sturdy metal or wooden legs, makes it a perfect fit for contemporary interiors. Whether you want a spacious sectional or a compact loveseat, this modular sofa adapts effortlessly to your lifestyle and decor.')">
+            <h3 class="product-title">Modular Sofa</h3>
+            <p class="product-price">$599</p>
+            <p class="product-description">
+              A versatile modular sofa with customizable sections,
+              offering flexible seating arrangements to fit any living space.
+            </p>
+            <button class="add-to-cart" onclick="addToCart('Modular Sofa', './media/modular sofa.png')">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="./media/bed.jpg" alt="Product 6" class="product-image" onclick="openProductModal('King Bed', 'This king bed offers a blend of comfort and sophistication, featuring an expansive frame that provides ample space for restful sleep. It includes a beautifully upholstered headboard, perfect for added support while reading or lounging. Crafted from high-quality wood or metal, the bed ensures durability and stability. The sleek, modern design with clean lines enhances the look of any bedroom, making it a stylish centerpiece that suits both contemporary and classic interiors. Ideal for those who appreciate both luxury and functionality in their sleeping space.')">
+            <h3 class="product-title">King Bed</h3>
+            <p class="product-price">$1500</p>
+            <p class="product-description">
+              A luxurious king bed with a spacious design,
+              providing the ultimate comfort and elegance for any bedroom.
+            </p>
+            <button class="add-to-cart" onclick="addToCart('King Bed', './media/bed.jpg')">Add to Cart</button>
+        </div>
+  
+        <div class="product-card">
+            <img src="./media/accent chair.jfif" alt="Product 7" class="product-image" onclick="openProductModal('Accent Chair', 'This chic accent chair features a distinctive silhouette with elegantly curved armrests and a high back, making it a standout piece in any space. Upholstered in premium fabric or leather, it offers a comfortable, cushioned seat that invites you to relax. Supported by solid wooden or metal legs, this chair blends both form and function, serving as the perfect statement piece for living rooms, bedrooms, or cozy reading nooks.')">
+            <h3 class="product-title">Accent Chair</h3>
+            <p class="product-price">$400</p>
+            <p class="product-description">
+              A stylish accent chair with a bold design,
+              adding a touch of personality and comfort to any room.
+            </p>
+            <button class="add-to-cart" onclick="addToCart('Accent Chair', './media/accent chair.jfif')">Add to Cart</button>
+        </div>
+  
+        <div class="product-card">
+            <img src="./media/bookshelf.jfif" alt="Product 8" class="product-image" onclick="openProductModal('Bookshelf', 'This versatile bookshelf combines functionality with a contemporary aesthetic, featuring multiple open shelves crafted from high-quality wood or metal. The spacious design offers ample room for organizing books, displaying decorative items, or showcasing personal collections. Its sleek, vertical structure makes it a perfect fit for living rooms, home offices, or bedrooms, adding both storage and style without taking up too much space.')">
+            <h3 class="product-title">Bookshelf</h3>
+            <p class="product-price">$200</p>
+            <p class="product-description">
+              A modern bookshelf with open shelves,
+              ideal for organizing books and displaying decor in a stylish way.
+            </p>
+            <button class="add-to-cart" onclick="addToCart('Bookshelf', './media/bookshelf.jfif')">Add to Cart</button>
+        </div>
+  
+        <div class="product-card">
+            <img src="./media/dining bench.webp" alt="Product 9" class="product-image" onclick="openProductModal('Dining Bench', 'This elegant dining bench offers a modern twist on traditional seating, featuring a streamlined design with a padded seat for added comfort. Upholstered in premium fabric or leather, it rests on sturdy wooden or metal legs, ensuring durability and stability. The bench is versatile enough to complement various dining table styles, making it an ideal choice for maximizing seating in dining rooms, kitchens, or entryways. Its minimalist design brings a contemporary touch to any interior.')">
+            <h3 class="product-title">Dining Bench</h3>
+            <p class="product-price">$150</p>
+            <p class="product-description">
+              A sleek dining bench that combines style and comfort,
+              perfect for casual or formal dining setups.
+            </p>
+            <button class="add-to-cart" onclick="addToCart('Dining Bench', './media/dining bench.webp')">Add to Cart</button>
+        </div>
+      </div>
+    
+      <!-- Product Modal -->
+      <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <h2 id="modal-product-title"></h2>
+            <p id="modal-product-description"></p>
+        </div>
+      </div>
+    </section>   
+    
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeCartModal()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total"></p>
+        <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
+        <button class="checkout" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4>About Us</h4>
+              <p>Crafted Comfort is a leading provider of high-quality furniture and home decor. Our mission is to help you create a comfortable and stylish living space that reflects your personality.</p>
+              <ul class="social-links">
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Quick Links</h4>
+              <ul class="quick-links">
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="about.html">About Us</a></li> -->
+                <li><a href="#">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Contact Us</h4>
+              <p>Address: 123 Main St, Anytown, USA 12345</p>
+              <p>Phone: 555-555-5555</p>
+              <p>Email: <a href="mailto:info@craftedcomfort.com">info@craftedcomfort.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2023 Crafted Comfort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

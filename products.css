@@ -1,0 +1,221 @@
+.cart-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+}
+
+#cart-icon-mobileview {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .cart-icon {
+        display: none;
+    }
+    #cart-icon-mobileview {
+        display: flex;
+        position: absolute;
+        right: 120px;
+        top: 30px;
+    }
+}
+
+#cart-count {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.items {
+    margin: 30px 0;
+}
+
+/* Product Card Styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.product-title,
+.product-price {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    background-color: rgb(173, 164, 149);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.add-to-cart:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add this CSS for the scroll animation */
+.product-card {
+    opacity: 0; /* Start hidden */
+    transform: translateY(-100%); /* Start slightly lower */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+.product-card.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Cart Modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: #888 3px dotted;
+}
+
+.cart-item-image {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.remove-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.remove-button:hover {
+    background-color: darkred;
+}
+
+/* Clear cart button */
+.clear-cart {
+    background-color: rgb(173, 164, 149);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.clear-cart:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.checkout {
+    background-color: rgb(173, 164, 149);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s; 
+    font-weight: bold;
+}
+
+.checkout:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
