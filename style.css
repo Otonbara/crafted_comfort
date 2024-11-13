@@ -401,7 +401,7 @@ nav #selected {
     font-weight: bold;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
     .counter-item .plus,
     .counter-item .plus-customers {
         top: 20%;
