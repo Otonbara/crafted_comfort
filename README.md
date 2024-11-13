@@ -2,6 +2,8 @@
 
 **Crafted Comfort** is a personal project that showcases a beautifully designed, responsive website for a furniture store. This project was built using only HTML, CSS, and JavaScript to practice frontend development skills and create an elegant and user-friendly interface.
 
+**Live Link:** (https://otonbara.github.io/crafted_comfort/)
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
