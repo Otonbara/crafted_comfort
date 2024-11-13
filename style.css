@@ -404,7 +404,7 @@ nav #selected {
 @media (max-width: 480px) {
     .counter-item .plus,
     .counter-item .plus-customers {
-        top: 40%;
+        top: 50%;
 }
 
 .counter-container {
