@@ -382,31 +382,24 @@ nav #selected {
 .counter {
     font-size: 48px;
     font-weight: bold;
-    margin-top: 10px;
 }
 
-.counter-item .plus {
+.horizontal-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus {
     font-size: 48px;
-    position: relative;
-    top: -48%;
-    left: 27%;
+    font-weight: bold; 
+}
+
+.plus-customers {
+    font-size: 48px;
     font-weight: bold;
 }
 
-.counter-item .plus-customers {
-    font-size: 48px;
-    position: relative;
-    top: -48%;
-    left: 25%;
-    font-weight: bold;
-}
-
-@media (max-width: 380px) {
-    .counter-item .plus,
-    .counter-item .plus-customers {
-        top: -50%;
-    }
-}
 
 .counter-container {
     opacity: 0; /* Start hidden */
